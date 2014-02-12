@@ -1,4 +1,4 @@
-var expect = require('chai').expect;
+var expect = require('chai').expect; //using the chai library expect
 var Card = require('../lib/card').Card; //object is constructed from file name card.js
 
 describe('Card object tests', function() {
@@ -15,23 +15,22 @@ describe('Card object tests', function() {
     });
     it('card should have a get suit function', function() {
       expect(card.getSuit).to.be.ok;
+      // -or- expect(card).to.have.property(getSuit);
     });
     it('card should have a get rank function', function() {
       expect(card.getRank).to.be.ok;
+      // -or- expect(card).to.have.property(getRank);
     });
-    it('card should be immutable', function() {
+    it('card.suit should be immutable', function() {
       expect(card.getSuit()).to.equal('hearts');
       card.suit = 'diamonds';
       expect(card.getSuit()).to.equal('hearts');
     });
-    // it('card should have a suit property', function() {
-    //   expect(card).to.have.property('suit');
-    // });
-    // it('card should have a rank property', function() {
-    //   expect(card).to.have.property('rank');
-    // });
+    it('card.rank should be immutable', function() {
+      expect(card.getRank()).to.equal('Jack');
+      card.suit = 10;
+      expect(card.getRank()).to.equal('Jack');
+    });
   });
 });
-//cannot do card.suit
-//property is created correctly (correct value of a property)
-//
+

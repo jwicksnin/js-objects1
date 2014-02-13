@@ -1,0 +1,15 @@
+{
+//victorporof/Sublime-JSHint#using-your-own-jshintrc-options
+
+"browser": true,
+"esnext": true,
+"globals": {},
+"globalstrict": true,
+"quotmark": true,
+"smarttabs": true,
+"trailing": true,
+"undef": true,
+"unused": true,
+"indent": 2,
+"node": true,
+}

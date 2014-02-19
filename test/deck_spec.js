@@ -4,10 +4,12 @@ var Card = require('../lib/card').Card;
 describe('Deck object tests', function() {
   'use strict';
   var deck;
+  var card;
+  var cards;
 
   beforeEach(function() {
-    var card = new Card("queen", "hearts", true, false);
-    var cards = [];
+    card = new Card("queen", "hearts", true, false);
+    cards = [];
     cards.push(card);
     deck = new Deck(cards);
   });

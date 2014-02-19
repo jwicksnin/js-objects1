@@ -7,7 +7,7 @@ module.exports = function(grunt) {
             },
       allFiles: [
         'Gruntfile.js',
-        'test/deck_spec.js',
+        'test/dealer_spec.js',
       ]
     },
     simplemocha: {
@@ -15,7 +15,7 @@ module.exports = function(grunt) {
         timeout: 3000
       },
       all: {
-        src: ['test/deck_spec.js']
+        src: ['test/dealer_spec.js']
       }
     }
 

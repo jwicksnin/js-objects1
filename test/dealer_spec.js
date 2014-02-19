@@ -8,10 +8,22 @@ describe('Dealer object tests', function() {
 
   beforeEach(function() {
     dealer = new Dealer();
+    card = new Card();
+    deck = new Deck();
   });
 
   describe('constructor', function() {
 
+    it('dealer should be able to take cards from player and add cards to a deck', function () {
+      dealer.out(card, player, deck);
+    });
+
+    it('dealer should be able to take cards from a deck and add cards to a player', function () {
+      dealer.into(card, player, deck);
+    });
+    it('dealer should know how many cards they have', function () {
+      dealer.count();
+    }):
 
 
   });

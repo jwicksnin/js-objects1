@@ -6,7 +6,7 @@ describe('Card object tests', function() {
   var card;
 
   beforeEach(function() {
-    card = new Card('hearts', 'Jack');
+    card = new Card('hearts', 'Jack', true, false);
   });
 
   describe('constructor', function() {
@@ -15,13 +15,11 @@ describe('Card object tests', function() {
       //expect(card).to.be.ok;
       expect(card).to.be.an('object');
     });
-    it('card should have a get suit function', function() {
-      expect(card.getSuit).to.be.an('function');
-      // -or- expect(card).to.have.property(getSuit);
-    });
-    it('card should have a get rank function', function() {
-      expect(card.getRank).to.be.an('function');
-      // -or- expect(card).to.have.property(getRank);
+    // it('card belongs to a deck or a player', function () {
+    //   expect(card.dealer || card.deck).to.be.true;
+    // });
+    it('card can change between decks and players', function () {
+      expect(card.changeHands()).to.be.ok;
     });
     it('card.suit should be immutable', function() {
       expect(card.getSuit()).to.equal('hearts');

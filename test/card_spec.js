@@ -1,12 +1,12 @@
 var expect = require('chai').expect; //using the chai library expect
-var Card = require('../lib/card').Card; //object is constructed from file name card.js
+var Card = require('../lib/card'); //object is constructed from file name card.js
 
 describe('Card object tests', function() {
   'use strict';
   var card;
 
   beforeEach(function() {
-    card = new Card('hearts', 'Jack', true, false);
+    card = new Card('hearts', 'Jack');
   });
 
   describe('constructor', function() {
@@ -18,9 +18,9 @@ describe('Card object tests', function() {
     // it('card belongs to a deck or a player', function () {
     //   expect(card.dealer || card.deck).to.be.true;
     // });
-    it('card can change between decks and players', function () {
-      expect(card.changeHands()).to.be.ok;
-    });
+    // it('card can change between decks and players', function () {
+    //   expect(card.changeHands()).to.be.ok;
+    // });
     it('card.suit should be immutable', function() {
       expect(card.getSuit()).to.equal('hearts');
       card.suit = 'diamonds';

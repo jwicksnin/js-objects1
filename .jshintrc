@@ -12,6 +12,8 @@
     "unused": true,
     "indent": 2,
     "ok": false,
+    "to" : false,
+    "be" : false,
     "beforeEach": false,
     "describe": false,
     "it": false

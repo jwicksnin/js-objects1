@@ -18,22 +18,20 @@ describe('Dealer object tests', function() {
     dealer.deal(card, player, deck);
   });
 
-
   describe('constructor', function() {
 
     it('dealer should be able to take cards from player and add cards to a deck', function () {
       var num = deck.total();
       dealer.pickup(card, player, deck);
       var newNum = deck.total();
-      expect(num).to.be.below(newNum);
-
+      expect(num).to.be.equal(newNum - 1);
     });
 
     it('dealer should be able to take cards from a deck and add cards to a player', function () {
       var num = player.total();
       dealer.deal(card, player, deck);
       var newNum = player.total();
-      expect(num).to.be.below(newNum);
+      expect(num).to.be.equal(newNum - 1);
     });
   });
 });

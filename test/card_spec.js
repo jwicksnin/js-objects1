@@ -15,12 +15,6 @@ describe('Card object tests', function() {
       //expect(card).to.be.ok;
       expect(card).to.be.an('object');
     });
-    // it('card belongs to a deck or a player', function () {
-    //   expect(card.dealer || card.deck).to.be.true;
-    // });
-    // it('card can change between decks and players', function () {
-    //   expect(card.changeHands()).to.be.ok;
-    // });
     it('card.suit should be immutable', function() {
       expect(card.getSuit()).to.equal('hearts');
       card.suit = 'diamonds';
@@ -28,7 +22,7 @@ describe('Card object tests', function() {
     });
     it('card.rank should be immutable', function() {
       expect(card.getRank()).to.equal('Jack');
-      card.suit = 10;
+      card.rank = 10;
       expect(card.getRank()).to.equal('Jack');
     });
   });
